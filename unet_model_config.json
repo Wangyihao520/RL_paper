@@ -1,0 +1,47 @@
+{
+  "pollutant": "PM25_TOT",
+  "precursors": [
+    "NOx",
+    "SO2",
+    "NH3",
+    "VOC",
+    "PM25"
+  ],
+  "sectors": [
+    "AG",
+    "AR",
+    "IN",
+    "PP",
+    "TR"
+  ],
+  "chemical_indicators": [
+    "HNO3",
+    "N2O5",
+    "NO2",
+    "HONO",
+    "NO",
+    "H2O2",
+    "O3",
+    "OH",
+    "FORM",
+    "ISOP",
+    "TERP",
+    "SO2",
+    "NH3",
+    "PM25_SO4",
+    "PM25_NO3",
+    "PM25_NH4",
+    "PM25_OC",
+    "PM25_TOT"
+  ],
+  "grid_shape": [
+    120,
+    144
+  ],
+  "num_emission_channels": 25,
+  "num_chemical_channels": 36,
+  "total_input_channels": 61,
+  "output_channels": 1,
+  "training_date": "2025-07-03 15:04:21",
+  "model_type": "U-Net_End_to_End_Emission_Concentration"
+}
