@@ -4,12 +4,12 @@ The scripts in this repository assume the following project layout.
 
 ```text
 project_root/
-├─ train_unet2.py
-├─ train_e2_v46.py
-├─ v15_copy.py
-├─ v24_copy.py
-├─ v14_MADDPG.py
-├─ ga2.py
+├─ U-net_training.py
+├─ MARL_Environment.py
+├─ MAPPO.py
+├─ MAPPO-region.py
+├─ MADDPG.py
+├─ GA.py
 ├─ models_unet/
 │  ├─ scalers.pkl
 │  ├─ unet_model_config.json
