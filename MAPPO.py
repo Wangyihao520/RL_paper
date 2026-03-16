@@ -4627,46 +4627,6 @@ if __name__ == "__main__":
     PARALLEL_TRAINING = True  # 是否启用并行训练（True: 并行, False: 串行）
     NUM_WORKERS = 2  # 并行工作进程数（None表示自动选择，建议5或10）
 
-    # ========== 可自定义的省份优化配置 ==========
-    # 方式1: 使用默认配置（第一个省份200轮，其他60轮）
-    # PROVINCE_TRAINING_CONFIG = None
-
-    # 方式2: 自定义每个省份的优化顺序和轮次
-    # 示例：先优化HB（200轮），然后SD（100轮），然后其他省份（各50轮）
-    PROVINCE_TRAINING_CONFIG = [
-        {'province_idx': 0, 'province_name': 'HA', 'episodes': 4000},
-        {'province_idx': 1, 'province_name': 'HUB', 'episodes': 60},
-        {'province_idx': 2, 'province_name': 'HUN', 'episodes': 60},
-        {'province_idx': 3, 'province_name': 'JS', 'episodes': 60},
-        {'province_idx': 4, 'province_name': 'SH', 'episodes': 60},
-        {'province_idx': 5, 'province_name': 'SD', 'episodes': 60},
-        {'province_idx': 6, 'province_name': 'HN', 'episodes': 60},
-        {'province_idx': 7, 'province_name': 'TJ', 'episodes': 60},
-        {'province_idx': 8, 'province_name': 'HB', 'episodes': 60},
-        {'province_idx': 9, 'province_name': 'BJ', 'episodes': 60},
-        {'province_idx': 10, 'province_name': 'SX', 'episodes': 60},
-        {'province_idx': 11, 'province_name': 'NMG', 'episodes': 60},
-        {'province_idx': 12, 'province_name': 'JL', 'episodes': 60},
-        {'province_idx': 13, 'province_name': 'LN', 'episodes': 60},
-        {'province_idx': 14, 'province_name': 'HLJ', 'episodes': 60},
-        {'province_idx': 15, 'province_name': 'CQ', 'episodes': 60},
-        {'province_idx': 16, 'province_name': 'GD', 'episodes': 60},
-        {'province_idx': 17, 'province_name': 'AH', 'episodes': 60},
-        {'province_idx': 18, 'province_name': 'XJ', 'episodes': 60},
-        {'province_idx': 19, 'province_name': 'YN', 'episodes': 60},
-        {'province_idx': 20, 'province_name': 'GZ', 'episodes': 60},
-        {'province_idx': 21, 'province_name': 'GS', 'episodes': 60},
-        {'province_idx': 22, 'province_name': 'SI', 'episodes': 60},
-        {'province_idx': 23, 'province_name': 'NX', 'episodes': 60},
-        {'province_idx': 24, 'province_name': 'JX', 'episodes': 60},
-        {'province_idx': 25, 'province_name': 'SC', 'episodes': 60},
-        {'province_idx': 26, 'province_name': 'FJ', 'episodes': 60},
-        {'province_idx': 27, 'province_name': 'GX', 'episodes': 60},
-        {'province_idx': 28, 'province_name': 'QH', 'episodes': 60},
-        {'province_idx': 29, 'province_name': 'ZJ', 'episodes': 60},
-        {'province_idx': 30, 'province_name': 'XZ', 'episodes': 360},
-    ]
-
     # 总训练轮次上限（可选，如果设置会覆盖基于province_training_config的计算）
     MAX_TOTAL_EPISODES = 3000  # 例如: 2000
 
