@@ -745,8 +745,8 @@ class GAOptimizer:
 
     def __init__(self,
                  env: RSMEmissionEnv,
-                 population_size: int = 100,
-                 generations: int = 200,
+                 population_size: int = 200,
+                 generations: int = 500,
                  crossover_rate: float = 0.8,
                  mutation_rate: float = 0.1,
                  elite_ratio: float = 0.1,
