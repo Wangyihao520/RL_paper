@@ -2,7 +2,7 @@
 
 ## Purpose
 
-`train_unet2.py` trains a U-Net based surrogate model that maps emission changes and background chemical indicators to gridded `PM25_TOT` responses.
+`U-net_trainging.py` trains a U-Net based surrogate model that maps emission changes and background chemical indicators to gridded `PM25_TOT` responses.
 
 ## Input Summary
 
@@ -29,7 +29,7 @@ See `DATA_STRUCTURE.md` for the exact directory layout.
 ## Run Training
 
 ```bash
-python train_unet2.py --data_path ./ --output_path ./models_unet/ --pollutant PM25_TOT --epochs 1000 --batch_size 8 --k_folds 5 --load_scenarios 150 --normal_repeat 6 --extreme_repeat 10
+python U-net_trainging.py --data_path ./ --output_path ./models_unet/ --pollutant PM25_TOT --epochs 1000 --batch_size 8 --k_folds 5 --load_scenarios 600 --normal_repeat 2 --extreme_repeat 10
 ```
 
 ## Important Arguments
