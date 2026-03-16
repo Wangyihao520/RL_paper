@@ -4,20 +4,20 @@
 
 This project contains two MAPPO-related scripts:
 
-- `train_e2_v46.py`: environment definition, reward components, health-effect utilities, and the original TensorFlow MAPPO baseline.
-- `v15_copy.py`: main PyTorch MAPPO training script used for optimization experiments.
-- `v24_copy.py`: region-priority MAPPO variant.
+- `MARL_Environment.py`: environment definition, reward components, health-effect utilities, and the original TensorFlow MAPPO baseline.
+- `MAPPO.py`: main PyTorch MAPPO training script used for optimization experiments.
+- `MAPPO-region.py`: region-priority MAPPO variant.
 
 ## Pipeline
 
-1. Train the U-Net surrogate model with `train_unet2.py`.
+1. Train the U-Net surrogate model with `U-net_training.py`.
 2. Place the trained model files in `models_unet/`.
 3. Prepare concentration, emission, cost, transport, health, and province-mapping data.
 4. Launch MAPPO training.
 
 ## Environment Inputs
 
-The RL environment is implemented in `train_e2_v46.py` as `RSMEmissionEnv`.
+The RL environment is implemented in `MARL_Environment.py` as `RSMEmissionEnv`.
 
 Required files:
 
@@ -44,7 +44,7 @@ Required files:
 
 ## Reward Components
 
-The reward design in `train_e2_v46.py` combines:
+The reward design in `MARL_Environment.py` combines:
 
 - PM2.5 target attainment
 - emission-reduction cost
@@ -56,7 +56,7 @@ The reward design in `train_e2_v46.py` combines:
 ## Run The Main PyTorch MAPPO Script
 
 ```bash
-python v15_copy.py
+python MAPPO.py
 ```
 
 Edit the configuration block near the bottom of the file to control:
@@ -71,13 +71,13 @@ Edit the configuration block near the bottom of the file to control:
 ## Run The Region-Priority MAPPO Variant
 
 ```bash
-python v24_copy.py
+python MAPPO-region.py
 ```
 
 ## Original TensorFlow Baseline
 
 ```bash
-python train_e2_v46.py
+python MARL_Environment.py
 ```
 
 ## Expected Outputs
@@ -92,6 +92,6 @@ Depending on the script, outputs include:
 
 ## Release Recommendations
 
-- Publicly release `train_e2_v46.py`, `v15_copy.py`, and `v24_copy.py` with cleaned English comments.
+- Publicly release `MARL_Environment.py`, `MAPPO.py`, and `MAPPO-region.py` with cleaned English comments.
 - Keep fixed experimental settings in a separate config file in future revisions.
 - Separate environment code from training code if you plan a second open-source pass.
