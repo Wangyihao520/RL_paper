@@ -1840,11 +1840,11 @@ if __name__ == "__main__":
     parser.add_argument('--k_folds', type=int, default=5, help='Number of CV folds; use 1 to disable cross-validation')
     parser.add_argument('--stratified', action='store_true', default=True, help='Use stratified sampling for regular and extreme scenarios')
     parser.add_argument('--no_stratified', dest='stratified', action='store_false', help='Disable stratified sampling')
-    parser.add_argument('--load_scenarios', type=int, default=150, help='Number of scenarios to load')
+    parser.add_argument('--load_scenarios', type=int, default=600, help='Number of scenarios to load')
 
     # Scenario repetition settings
-    parser.add_argument('--normal_repeat', type=int, default=6, help='Repeat factor for regular scenarios')
-    parser.add_argument('--extreme_repeat', type=int, default=10, help='Repeat factor for extreme boundary scenarios')
+    parser.add_argument('--normal_repeat', type=int, default=2, help='Repeat factor for regular scenarios')
+    parser.add_argument('--extreme_repeat', type=int, default=2, help='Repeat factor for extreme boundary scenarios')
 
     args = parser.parse_args()
 
