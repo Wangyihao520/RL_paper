@@ -1,4 +1,4 @@
-# train_e2_v2.py - TensorFlow version
+# MARL_Envoronment.py - TensorFlow version
 import numpy as np
 import pandas as pd
 import os
